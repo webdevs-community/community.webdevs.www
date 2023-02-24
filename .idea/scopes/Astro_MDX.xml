@@ -1,0 +1,3 @@
+<component name="DependencyValidationManager">
+  <scope name="Astro MDX" pattern="file[astro-mdx]:src//*||file[astro-mdx]:public//*||file:.env||file:.gitignore||file:astro.config.mjs||file:package-lock.json||file:package.json||file:README.md||file:svelte.config.js||file:tailwind.config.cjs||file:tsconfig.json" />
+</component>

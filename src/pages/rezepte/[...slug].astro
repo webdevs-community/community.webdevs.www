@@ -1,0 +1,33 @@
+---
+// Settings
+export const prerender = true;
+
+// Imports
+import { getCollection } from "astro:content";
+import Layout from "@layouts/Layout.astro";
+import Heading from "@components/Text/Heading.svelte";
+import Link from "@components/Text/Link.svelte";
+
+// Generate Static Paths
+export async function getStaticPaths() {
+  const rezepte = await getCollection("rezepte");
+  console.log('lol', rezepte[0].slug.split('/'))
+  return rezepte.map((entry) => ({
+    params: {
+      slug: entry.slug,
+    },
+    props: {
+      entry,
+    },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+---
+
+<Layout title="Rezepte">
+  <Link href={"rezepte"} text="Rezepte" />
+  <Heading text={entry.data.title} tag="h1" vSize={"mega"} />
+  <Content />
+</Layout>
