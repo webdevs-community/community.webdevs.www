@@ -14,37 +14,17 @@ module.exports = [
       black: colors.black,
       white: colors.white,
       'keyboard-focus': '#ff98de',
-      gray: colors.zinc,
-      primary: colors.green,
-      secondary: colors.emerald,
+      background: '#101115',
+      line: '#282a36',
+      foreground: '#f8f8f2',
+      comment: '#6272a4',
+      cyan: '#8be9fd',
+      green: '#50fa7b',
+      orange: '#ffb86c',
+      pink: '#ff79c6',
+      purple: '#bd93f9',
+      red: '#ff5555',
+      yellow: '#f1fa8c',
     },
-  },
-  {
-    name: 'monochrome',
-    colors: {
-      primary: colors.neutral,
-      secondary: colors.stone,
-    },
-  },
-  {
-    name: 'blue',
-    colors: {
-      primary: colors.blue,
-      secondary: colors.sky,
-    },
-  },
-  {
-    name: 'red',
-    colors: {
-      primary: colors.red,
-      secondary: colors.rose,
-    },
-  },
-  {
-    name: 'purple',
-    colors: {
-      primary: colors.purple,
-      secondary: colors.violet,
-    },
-  },
+  }
 ];

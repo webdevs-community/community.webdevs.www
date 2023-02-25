@@ -5,34 +5,34 @@
 module.exports = {
   '.container': {
     width: '100%',
-    paddingLeft: '1rem',
-    paddingRight: '1rem',
+    paddingLeft: '2rem',
+    paddingRight: '2rem',
     marginLeft: 'auto',
     marginRight: 'auto',
     '@screen md': {
-      paddingLeft: '2rem',
-      paddingRight: '2rem',
+      paddingLeft: '3rem',
+      paddingRight: '3rem',
     },
     '@screen xl': {
-      maxWidth: 'calc(theme(screens.xl) + 4rem)',
+      maxWidth: 'calc(theme(screens.xl) + 6rem)',
     },
     '@screen 2xl': {
-      maxWidth: 'calc(theme(screens.2xl) + 8rem)',
-      paddingLeft: '4rem',
-      paddingRight: '4rem',
+      maxWidth: 'calc(theme(screens.2xl) + 10rem)',
+      paddingLeft: '5rem',
+      paddingRight: '5rem',
     },
   },
   '.container-full': {
     width: '100%',
-    paddingLeft: '1rem',
-    paddingRight: '1rem',
+    paddingLeft: '2rem',
+    paddingRight: '2rem',
     '@screen md': {
-      paddingLeft: '2rem',
-      paddingRight: '2rem',
+      paddingLeft: '3rem',
+      paddingRight: '3rem',
     },
     '@screen 2xl': {
-      paddingLeft: '4rem',
-      paddingRight: '4rem',
+      paddingLeft: '5rem',
+      paddingRight: '5rem',
     },
   },
 };

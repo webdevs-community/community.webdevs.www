@@ -1,9 +1,10 @@
 ---
-import "@css/app.css";
+import '@css/app.css';
 import {getCollection} from "astro:content";
 import {createNav} from "@utils/createNav";
 import Header from "@components/Framework/Header.svelte";
 import Jetbrains from "./partials/Jetbrains.astro";
+import Merriweather from "./partials/Merriweather.astro";
 import {prevent_default} from "svelte/internal";
 export interface Props {
   title: string;
@@ -26,11 +27,13 @@ const NAV_ITEMS = createNav(rezepte);
 </head>
 <body>
 <Jetbrains/>
-<div class="w-full min-h-screen flex flex-row py-16 px-12 bg-pink-200">
+<Merriweather/>
+<div class="w-full min-h-screen pt-48 relative">
   <Header/>
-  <main class="bg-white grow rounded-3xl p-24">
+  <main class="">
     <slot/>
   </main>
+  <div class="fixed inset-0 border border-[1rem] border-foreground pointer-events-none"></div>
 </div>
 </body>
 </html>

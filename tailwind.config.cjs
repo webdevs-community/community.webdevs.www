@@ -10,7 +10,7 @@ const settingsfluidType = require('./tailwind/tailwind.settings.fluidType.cjs');
 const settingsThemeIt = require('./tailwind/tailwind.settings.themeIt.cjs');
 
 module.exports = {
-  content: ['./templates/**/*.{twig,html,vue,js,ts}', './src/vue/**/*.{vue,js,ts}'],
+  content: ['./src/**/*.{astro,svelte,vue,js,ts,jsx,tsx,css,mdx,md}'],
   safelist: [],
   darkMode: 'class', // or 'media' or 'class'
   theme: {
@@ -58,7 +58,7 @@ module.exports = {
     }),
     ({ addComponents }) => {
       // eslint-disable-next-line @typescript-eslint/no-var-requires
-      addComponents(require('./tailwind/tailwind.plugins.addComponents'));
+      addComponents(require('./tailwind/tailwind.plugins.addComponents.cjs'));
     },
   ],
 };
