@@ -1,49 +1,36 @@
 ---
 import "@css/app.css";
-import { getCollection } from "astro:content";
-import { createNav } from "@utils/createNav";
+import {getCollection} from "astro:content";
+import {createNav} from "@utils/createNav";
 import Header from "@components/Framework/Header.svelte";
-import { prevent_default } from "svelte/internal";
+import Jetbrains from "./partials/Jetbrains.astro";
+import {prevent_default} from "svelte/internal";
 export interface Props {
   title: string;
 }
 
 const rezepte = await getCollection("rezepte");
 
-const { title } = Astro.props;
+const {title} = Astro.props;
 const NAV_ITEMS = createNav(rezepte);
 ---
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
-  </head>
-  <body>
-    <div class="w-full min-h-screen flex flex-row py-16 px-12 bg-pink-200">
-      <Header navItems={NAV_ITEMS} />
-      <main class="bg-white grow rounded-3xl p-24">
-        <slot />
-      </main>
-    </div>
-  </body>
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width"/>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+  <meta name="generator" content={Astro.generator}/>
+  <title>{title}</title>
+</head>
+<body>
+<Jetbrains/>
+<div class="w-full min-h-screen flex flex-row py-16 px-12 bg-pink-200">
+  <Header/>
+  <main class="bg-white grow rounded-3xl p-24">
+    <slot/>
+  </main>
+</div>
+</body>
 </html>
-<style is:global>
-  :root {
-    --accent: 124, 58, 237;
-    --accent-gradient: linear-gradient(
-      45deg,
-      rgb(var(--accent)),
-      #da62c4 30%,
-      white 60%
-    );
-  }
-  html {
-    font-family: system-ui, sans-serif;
-    background-color: #f6f6f6;
-  }
-</style>

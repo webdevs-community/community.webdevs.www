@@ -16,8 +16,15 @@
     "@astrojs/svelte": "^2.0.1",
     "@astrojs/tailwind": "^3.0.1",
     "@astrojs/vercel": "^3.0.0",
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@tailwindcss/container-queries": "^0.1.0",
     "astro": "^2.0.4",
     "svelte": "^3.55.1",
-    "tailwindcss": "^3.2.4"
+    "tailwindcss": "^3.2.4",
+    "tailwindcss-fluid-type": "^2.0.3",
+    "tailwindcss-theme-it": "^1.0.1",
+    "typeface-jetbrains-mono": "^2.0.1",
+    "typeface-lato": "^1.1.13",
+    "typeface-merriweather": "^1.1.13"
   }
 }
