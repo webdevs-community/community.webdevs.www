@@ -8,7 +8,7 @@ import svelte from "@astrojs/svelte";
 import cloudflare from '@astrojs/cloudflare';
 
 // https://astro.build/config
-import image from "@astrojs/image";
+// import image from "@astrojs/image";
 
 // https://astro.build/config
 import mdx from "@astrojs/mdx";
@@ -29,7 +29,7 @@ export default defineConfig({
   build: {
     format: "file"
   },
-  integrations: [svelte(), image(), mdx(), tailwind({
+  integrations: [svelte(), mdx(), tailwind({
     config: {
       path: "./tailwind.config.cjs",
       applyBaseStyles: false
