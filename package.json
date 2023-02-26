@@ -8,11 +8,13 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "upgrade-interactive": "npm-check --update",
+    "ui": "npm run upgrade-interactive"
   },
   "dependencies": {
-    "@astrojs/image": "^0.13.1",
-    "@astrojs/mdx": "^0.15.2",
+    "@astrojs/image": "^0.15.1",
+    "@astrojs/mdx": "^0.17.2",
     "@astrojs/svelte": "^2.0.1",
     "@astrojs/tailwind": "^3.0.1",
     "@astrojs/vercel": "^3.0.0",
@@ -27,5 +29,8 @@
     "typeface-jetbrains-mono": "^2.0.1",
     "typeface-lato": "^1.1.13",
     "typeface-merriweather": "^1.1.13"
+  },
+  "devDependencies": {
+    "npm-check": "^6.0.1"
   }
 }
