@@ -1,7 +1,7 @@
 <script lang="ts">
   // Imports
   import SiDiscord from "svelte-icons-pack/si/SiDiscord";
-  import Logo from "@components/framework/Logo.svelte"
+  import Logo from "@components/Framework/Logo.svelte"
   import Link from "@components/Text/Link.svelte";
 
 
