@@ -4,8 +4,8 @@ import { defineConfig } from "astro/config";
 import svelte from "@astrojs/svelte";
 
 // https://astro.build/config
-// import vercel from "@astrojs/vercel/serverless";
-import cloudflare from '@astrojs/cloudflare';
+import vercel from "@astrojs/vercel/serverless";
+// import cloudflare from '@astrojs/cloudflare';
 
 // https://astro.build/config
 // import image from "@astrojs/image";
@@ -25,7 +25,7 @@ export default defineConfig({
   site: process.env.PUBLIC_SITE,
   trailingSlash: "never",
   output: "server",
-  adapter: cloudflare(),
+  adapter: vercel(),
   build: {
     format: "file"
   },
