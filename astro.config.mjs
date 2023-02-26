@@ -4,7 +4,7 @@ import { defineConfig } from "astro/config";
 import svelte from "@astrojs/svelte";
 
 // https://astro.build/config
-import vercel from "@astrojs/vercel/static";
+import vercel from "@astrojs/vercel/serverless";
 
 // https://astro.build/config
 import image from "@astrojs/image";
@@ -21,7 +21,7 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   site: process.env.PUBLIC_SITE,
   trailingSlash: "never",
-  output: "static",
+  output: "server",
   adapter: vercel(),
   build: {
     format: "file",
