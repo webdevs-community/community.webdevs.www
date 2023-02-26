@@ -14,12 +14,12 @@ const globals = await getEntryBySlug("globals", "globals")
   <main class="">
     <div class="container mx-auto">
       {globals?.data?.description && (
-        <div class="max-w-screen-lg min-h-[calc(100vh-8rem)] mx-auto flex flex-col justify-center">
+        <div class="max-w-screen-lg min-h-[calc(100vh-9rem)] mx-auto flex flex-col justify-center">
           <div class="text-4xl font-serif !leading-snug font-extrabold break-word md:break-normal">
             <Fragment set:html={globals.data.description} />
           </div>
           <Link
-            class="my-8 mx-auto"
+            class="mt-8 mb-16 mx-auto"
             target="_blank"
             href="https://discord.com/invite/66J8zgj2DE"
             text="Join our Discord"
