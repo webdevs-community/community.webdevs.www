@@ -8,6 +8,7 @@
   export let icon: string;
   export let cRoot: string = "";
   export let vSize: string = "md";
+  export let vIconSize: string = "md";
   export let vColor: string = "primary";
   export let vStyle: string = "button";
 
@@ -25,12 +26,17 @@
   // Internal
   const tag: "button" | "a" = href ? "a" : "button";
   const cc: ICompClasses = {
-    root: "font-bold inline-flex items-center gap-3 transition-all whitespace-pre",
+    root: "font-bold inline-flex justify-center items-center gap-3 transition-all whitespace-pre",
     rootCustom: cRoot,
     size: {
       sm: "px-2 py-1",
       md: "px-4 py-2",
       lg: "px-6 py-3",
+    },
+    iconSize: {
+      sm: "w-4 h-4",
+      md: "w-5 h-5",
+      lg: "w-8 h-8",
     },
     color: {
       primary: "bg-pink hover:bg-purple text-white",
@@ -49,6 +55,6 @@
 
 {#if text}
   <svelte:element this={tag} href={setFinalUrl(href)} class={twClasses}>
-    {#if icon}<Icon className="fill-current" src={icon} />{/if}{text}
+    {#if icon}<Icon className="fill-current {cc.iconSize[vIconSize]}" src={icon} />{/if}{text}
   </svelte:element>
 {/if}

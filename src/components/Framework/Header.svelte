@@ -10,7 +10,7 @@
 
   // Internal
   const cc: ICompClasses = {
-    root: "h-32 bg-background/90 fixed top-4 inset-x-4 z-50 backdrop-blur-sm flex items-center",
+    root: "h-32 bg-background/50 fixed top-4 inset-x-0 z-50 backdrop-blur-sm flex items-center",
     rootCustom: cRoot,
     inner: 'h-24 w-full container mx-auto  flex items-center justify-between',
     logo: 'w-16 h-16 text-white'
@@ -22,8 +22,11 @@
 
 <header class={twClasses}>
   <div class={cc.inner}>
-    <Logo class={cc.logo} />
+    <a href="/">
+      <Logo class={cc.logo} />
+    </a>
     <Link
+      class="-indent-96 !gap-0 sm:!gap-3 sm:indent-0"
       target="_blank"
       href="https://discord.com/invite/66J8zgj2DE"
       text="Discord"
