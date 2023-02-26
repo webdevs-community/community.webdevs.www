@@ -19,23 +19,20 @@ import tailwind from "@astrojs/tailwind";
 // https://astro.build/config
 
 // https://astro.build/config
+
+// https://astro.build/config
 export default defineConfig({
   site: process.env.PUBLIC_SITE,
   trailingSlash: "never",
   output: "server",
   adapter: cloudflare(),
   build: {
-    format: "file",
+    format: "file"
   },
-  integrations: [
-    svelte(),
-    image(),
-    mdx(),
-    tailwind({
-      config: {
-        path: "./tailwind.config.cjs",
-        applyBaseStyles: false,
-      },
-    }),
-  ],
+  integrations: [svelte(), image(), mdx(), tailwind({
+    config: {
+      path: "./tailwind.config.cjs",
+      applyBaseStyles: false
+    }
+  })]
 });
