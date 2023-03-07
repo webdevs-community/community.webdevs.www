@@ -3,15 +3,15 @@ import { defineConfig } from "astro/config";
 import svelte from "@astrojs/svelte";
 // import image from "@astrojs/image";
 
-// import vercel from "@astrojs/vercel/serverless";
-import cloudflare from '@astrojs/cloudflare';
+import vercel from "@astrojs/vercel/serverless";
+// import cloudflare from '@astrojs/cloudflare';
 import mdx from "@astrojs/mdx";
 import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   site: process.env.PUBLIC_SITE,
   trailingSlash: "never",
   output: "server",
-  adapter: cloudflare(),
+  adapter: vercel(),
   build: {
     format: "file"
   },
