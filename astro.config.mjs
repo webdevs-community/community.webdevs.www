@@ -26,5 +26,7 @@ export default defineConfig({
         applyBaseStyles: false
       }
     }),
-    critters()]
+    critters({
+      fonts: true,
+    })]
 });
