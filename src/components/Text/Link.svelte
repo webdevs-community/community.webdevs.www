@@ -1,11 +1,13 @@
 <script lang="ts">
   import Icon from 'svelte-icons-pack/Icon.svelte';
   import { SITE_URL } from "@config/constants";
+  import _default from "svelte-icons-pack/si/SiDiscord";
 
   // Export Props
   export let href: string | null = null;
   export let text: string;
-  export let icon: string;
+  export let target: '_blank' | '' = ''
+  export let icon: string | _default;
   export let cRoot: string = "";
   export let vSize: string = "md";
   export let vIconSize: string = "md";
@@ -54,7 +56,7 @@
 </script>
 
 {#if text}
-  <svelte:element this={tag} href={setFinalUrl(href)} class={twClasses}>
+  <svelte:element this={tag} href={setFinalUrl(href)} target={target} class={twClasses}>
     {#if icon}<Icon className="fill-current {cc.iconSize[vIconSize]}" src={icon} />{/if}{text}
   </svelte:element>
 {/if}

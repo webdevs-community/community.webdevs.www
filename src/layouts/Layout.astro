@@ -10,10 +10,10 @@ export interface Props {
   title: string;
 }
 
-const rezepte = await getCollection("rezepte");
+const team = await getCollection("team");
 
 const {title} = Astro.props;
-const NAV_ITEMS = createNav(rezepte);
+const NAV_ITEMS = createNav(team);
 ---
 
 <!DOCTYPE html>

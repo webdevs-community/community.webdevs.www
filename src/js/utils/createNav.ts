@@ -12,7 +12,7 @@ interface INavItemFinal {
     children: INavItem[];
 }
 
-export const createNav = (items: CollectionEntry<"rezepte">[]) => {
+export const createNav = (items: CollectionEntry<"team">[]) => {
     // Reformat data
     const ITEMS = items.reduce((current, item) => {
         const SEGMENTS = item.slug.split("/") || [];
