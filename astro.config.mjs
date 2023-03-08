@@ -17,6 +17,9 @@ export default defineConfig({
   build: {
     format: "file"
   },
+  experimental: {
+    assets: true
+  },
   integrations: [
     svelte(),
     mdx(),
