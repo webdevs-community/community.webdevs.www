@@ -26,7 +26,7 @@
   // Internal
   const tag: "button" | "a" = href ? "a" : "button";
   const cc: ICompClasses = {
-    root: "font-bold inline-flex justify-center items-center gap-3 transition-all whitespace-pre",
+    root: "font-bold inline-flex justify-center items-center gap-3 transition-all whitespace-pre overflow-hidden",
     rootCustom: cRoot,
     size: {
       sm: "px-2 py-1",
